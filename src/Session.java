@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Session {
+public class Session implements Serializable {
 
     private String sessionDate;
     private ArrayList<Player> Player;

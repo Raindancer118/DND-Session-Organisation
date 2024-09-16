@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Campaign {
+public class Campaign implements Serializable {
 
     String campaignName;
     String fromDate;
@@ -14,18 +15,22 @@ public class Campaign {
 
     public void addPlayer(Player player) {
         players.add(player);
+        Organizer.save();
     }
 
     public void addSession(Session session) {
         sessions.add(session);
+        Organizer.save();
     }
 
     public void setFromDate(String fromDate) {
         this.fromDate = fromDate;
+        Organizer.save();
     }
 
     public void setToDate(String toDate) {
         this.toDate = toDate;
+        Organizer.save();
     }
 
     public String getCampaignName() {
@@ -48,7 +53,20 @@ public class Campaign {
         return sessions;
     }
 
+    public static void printCampaignDetails(Campaign campaign) {
+        System.out.println("- - - - - - - - - - - - - - - Campaign: "+campaign.getCampaignName()+" - - - - - - - - - - - - - - - - - -");
+        System.out.println("From Date: "+campaign.getFromDate());
+        System.out.println("To Date: "+campaign.getToDate());
+        System.out.println("Sessions: "+campaign.getSessions().size());
+        for (Session session : campaign.getSessions()) {
+            System.out.println("Session: "+session);
+        }
+        System.out.println("Players: "+campaign.getPlayers().size());
+        for (Player player : campaign.getPlayers()) {
+            System.out.println("Player: "+player);
+        }
 
+    }
 
     public static Campaign Mysteria = new Campaign("Mysteria: Fall of Avendor");
 

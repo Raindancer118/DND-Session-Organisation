@@ -4,7 +4,13 @@ import java.util.ArrayList;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        // Campaign-Vorbereitung:
-        ArrayList<Player> players = ObjectStorage.loadPlayers();
+        //Datenimport:
+        Organizer.main(args);
+
+        for (int i  = 0; i < Campaign.Mysteria.getPlayers().size(); i++){
+             System.out.println(Campaign.Mysteria.getPlayers().get(i).getName());
+        }
+
+        Campaign.printCampaignDetails(Campaign.Mysteria);
     }
 }

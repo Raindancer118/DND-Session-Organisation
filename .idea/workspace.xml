@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="068b9da0-0577-43b1-be6e-092f2762db3a" name="Changes" comment="Session Organizer built towards being able to store and load Objects. Current State:&#10;-&gt; Session has been defined&#10;-&gt; Player has been defined&#10;-&gt; Campaign has been defined&#10;&#10;=&gt; All current Methods are functional!">
-      <change afterPath="$PROJECT_DIR$/src/GameCharacter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ObjectStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organizer.java" afterDir="false" />
+    <list default="true" id="068b9da0-0577-43b1-be6e-092f2762db3a" name="Changes" comment="&#10;&#10;&#10;Changelog:&#10;-&gt; Organizer Class build&#10;-&gt; failed to fully implement ObjectStorage Class.&#10;-&gt; Added GameCharacter Class to be able to add Character information to Players and Campaigns.&#10;&#10;Planned Changes:&#10;-&gt; Adding full Save-Support and allowing to save objects Player, Session and Campaign">
+      <change afterPath="$PROJECT_DIR$/src/CampaignStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Campaign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Campaign.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ObjectStorage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,21 +28,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Raindancer118"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Raindancer118&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Raindancer118/DND-Session-Organisation",
-    "accountId": "48777a1e-517d-4b73-b06c-17d81d3ee06c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Raindancer118/DND-Session-Organisation&quot;,
+    &quot;accountId&quot;: &quot;48777a1e-517d-4b73-b06c-17d81d3ee06c&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2m4Hk3iYXcnVbbG9LhUAj93incc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,9 +51,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "Application.ObjectStorage.executor": "Run",
     "Application.Organizer.executor": "Run",
+    "Application.PlayerStorage.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "extract.method.default.visibility": "public",
@@ -68,6 +69,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ObjectStorage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ObjectStorage" />
@@ -99,6 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1726329071224</updated>
       <workItem from="1726329072269" duration="7582000" />
+      <workItem from="1726468526535" duration="3679000" />
+      <workItem from="1726474243970" duration="2322000" />
     </task>
     <task id="LOCAL-00001" summary="Session Organizer built towards being able to store and load Objects. Current State:&#10;-&gt; Session has been defined&#10;-&gt; Player has been defined&#10;-&gt; Campaign has been defined&#10;&#10;=&gt; All current Methods are functional!">
       <option name="closed" value="true" />
@@ -108,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726332152466</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&#10;&#10;&#10;Changelog:&#10;-&gt; Organizer Class build&#10;-&gt; failed to fully implement ObjectStorage Class.&#10;-&gt; Added GameCharacter Class to be able to add Character information to Players and Campaigns.&#10;&#10;Planned Changes:&#10;-&gt; Adding full Save-Support and allowing to save objects Player, Session and Campaign">
+      <option name="closed" value="true" />
+      <created>1726469139809</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726469139809</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,69 +132,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Session Organizer built towards being able to store and load Objects. Current State:&#10;-&gt; Session has been defined&#10;-&gt; Player has been defined&#10;-&gt; Campaign has been defined&#10;&#10;=&gt; All current Methods are functional!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Session Organizer built towards being able to store and load Objects. Current State:&#10;-&gt; Session has been defined&#10;-&gt; Player has been defined&#10;-&gt; Campaign has been defined&#10;&#10;=&gt; All current Methods are functional!" />
+    <MESSAGE value="&#10;&#10;&#10;Changelog:&#10;-&gt; Organizer Class build&#10;-&gt; failed to fully implement ObjectStorage Class.&#10;-&gt; Added GameCharacter Class to be able to add Character information to Players and Campaigns.&#10;&#10;Planned Changes:&#10;-&gt; Adding full Save-Support and allowing to save objects Player, Session and Campaign" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;&#10;Changelog:&#10;-&gt; Organizer Class build&#10;-&gt; failed to fully implement ObjectStorage Class.&#10;-&gt; Added GameCharacter Class to be able to add Character information to Players and Campaigns.&#10;&#10;Planned Changes:&#10;-&gt; Adding full Save-Support and allowing to save objects Player, Session and Campaign" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Organizer.java</url>
-          <line>17</line>
+          <line>13</line>
           <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ObjectStorage.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ObjectStorage.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ObjectStorage.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ObjectStorage.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ObjectStorage.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ObjectStorage.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ObjectStorage.java</url>
-          <line>104</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ObjectStorage.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/ObjectStorage.java</url>
-          <line>102</line>
-          <properties class="ObjectStorage" method="savePlayerData">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
