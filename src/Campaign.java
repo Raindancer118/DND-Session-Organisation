@@ -48,4 +48,8 @@ public class Campaign {
         return sessions;
     }
 
+
+
+    public static Campaign Mysteria = new Campaign("Mysteria: Fall of Avendor");
+
 }
