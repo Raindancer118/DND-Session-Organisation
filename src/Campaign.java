@@ -59,11 +59,11 @@ public class Campaign implements Serializable {
         System.out.println("To Date: "+campaign.getToDate());
         System.out.println("Sessions: "+campaign.getSessions().size());
         for (Session session : campaign.getSessions()) {
-            System.out.println("Session: "+session);
+            System.out.println("Session: "+session.getName());
         }
         System.out.println("Players: "+campaign.getPlayers().size());
         for (Player player : campaign.getPlayers()) {
-            System.out.println("Player: "+player);
+            System.out.println("Player: "+player.getName());
         }
 
     }
